@@ -1,6 +1,6 @@
+import { FormBuscaService } from './../../core/services/form-busca.service';
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
+
 
 @Component({
   selector: 'app-form-busca',
@@ -8,11 +8,8 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./form-busca.component.scss']
 })
 export class FormBuscaComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor( 
+    public formBuscaService : FormBuscaService) {}
+//no form busca ts só to usando o service que eu coloquei la no form busca service
 
-  openDialog() {
-    this.dialog.open(ModalComponent, {
-      width: '50%'
-    })
-  }
 }
